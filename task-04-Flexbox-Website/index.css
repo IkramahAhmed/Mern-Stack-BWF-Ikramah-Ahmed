@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #a1c3ff;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.navbar {
+  background: #3474e6;
+  color: #fff;
+  height: 60px;
+}
+
+.navbar .logo {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: lightblue;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.header {
+  background-color: #0151cc;
+  color: #fff;
+  min-height: 400px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+
+.header .container .image img {
+  max-width: 500px;
+margin: 20px 20px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.boxes .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  flex: 1;
+  background: #0a51cc;
+  color: #fff;
+  border-radius: 10px;
+  margin: 20px 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+}
+
+.box i {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .boxes .container {
+flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* Practice flex Box */
+
+/* .flex-container{
+    height: 400px;
+     background-color: white;
+     display: flex;
+     /* justify-content: start;
+     justify-content: space-around;*/
+     /* justify-content: space-between; 
+     align-items: center; */
+     /* align-items: end; }*/
+/* flex direction */
+/*.flex-container{
+    height: 500;
+     background-color: white;
+     display: flex;
+     flex-direction:column;
+     background-color: aliceblue;
+      justify-content: start;
+      justify-content: space-around;
+     align-items: start;
+}
+/* centering element 
+.item{
+    width: 100px;
+    height:100px;
+    background: blue;
+    color: white;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+/* Align Self */
+
+/* .item:nth-of-type(1){
+align-self: start;
+}
+.item:nth-of-type(2){
+    align-self: center;
+
+}.item:nth-of-type(3){
+    align-self: end;
+
+} */
+
+/* Orders*/
+/* you have three boxes and every  boxes have differnet things and you have to want the second box to first place. but you dont want to change the html of these boxes so you can use the orders */
+
+/* .item:nth-of-type(1){
+order:2
+}
+.item:nth-of-type(2){
+order:1
+
+}.item:nth-of-type(3){
+order:3;
+
+} */
+/* flex basis  */
+/* use for changing the  width of the boxes if you want to differnt  width of every box so you can use nth of type */
