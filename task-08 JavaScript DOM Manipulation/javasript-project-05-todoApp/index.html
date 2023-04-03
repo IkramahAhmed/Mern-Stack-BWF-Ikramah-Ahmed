@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="" id="todo-item">
+        <button onclick="addTodo()">ADD ITEM</button>
+        <button onclick="deleteall()">Delete all</button>
+    
+    </div>
+<div>
+    <ul id="list">
+
+    </ul>
+</div>
+
+    <script>
+     function addTodo(){
+        var todo=document.getElementById("todo-item");
+         var list=document.getElementById("list");
+
+         //add item
+       var li =document.createElement("li");
+       var liText=document.createTextNode(todo.value);
+       li.appendChild(liText);
+
+       list.appendChild(li);
+         //delete items
+      var delbtn =document.createElement("button");
+      var delText=document.createTextNode("delete");
+      delbtn.appendChild(delText);
+     
+
+      delbtn.setAttribute("onclick","deleteitem(this)")
+      li.appendChild(delbtn);
+      
+        //edit item
+ var editbtn=document.createElement("button");
+ var edittext=document.createTextNode("Edit");
+ editbtn.appendChild(edittext);
+ 
+ editbtn.setAttribute("onclick","edititem(this)")//this say pora  button utha layga delete ka or jahan function call horaha hoga wahan this ko get krlengay e kay zariay
+li.appendChild(editbtn);   
+
+todo.value="";
+     }   
+
+
+     function deleteitem(e){
+        console.log(e.parentNode);
+
+         e.parentNode.remove();
+
+      }
+    function deleteall(){
+        list.innerHTML="";
+    }
+
+    function edititem(e){
+    //   console.log(e.parentNode.firstChild.nodeValue);
+     var pro =prompt("enter updated value",e.parentNode.firstChild.nodeValue);
+     e.parentNode.firstChild.nodeValue =pro;
+    }
+    </script>
+</body>
+</html>
